@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p>点击下方按钮，查看今天是周几</p>
+    <button onclick='fun()'>点我</button>
+    <p id="demo"></p><!--注意p的顺序，因为代码是逐句执行的，所以元素要放在getele的前面-->
+    <script>
+        var x;
+        var y= new Date().getDay();
+        switch (y) {
+            case 0:
+                x='今天是周天';
+            case 1:
+            x='今天是周一';
+            case 2:
+            x=  '今天是周二';
+            case 3:
+            x=  '今天是周三';
+            case 4:
+            x=  '今天是周四';
+            case 5:
+            x=  '今天是周五';
+            case 6:
+            x=  '今天是周六';
+            break;
+        
+            default:x='失误，没有查到';
+                break;
+        }
+        function fun(){
+            document.getElementById('demo').innerHTML=x;
+        }
+    </script>
+</body>
+</html>
